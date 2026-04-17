@@ -5,7 +5,7 @@ const UnexpectedError = () => {
   const handleBack = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-gray-200 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-linear-0-to-br from-slate-50 to-gray-200 px-4">
       <div className="bg-white/70 backdrop-blur-lg shadow-xl rounded-2xl p-10 text-center max-w-md w-full">
         {/* 404 */}
         <h1 className="text-8xl font-extrabold text-gray-200 mb-2">404</h1>

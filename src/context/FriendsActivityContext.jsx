@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { createContext } from "react";
-import CallIcon from '../assets/call.png';
+import CallIcon from "../assets/call.png";
 import TextIcon from "../assets/text.png";
 import VideoIcon from "../assets/video.png";
+import toast from "react-hot-toast";
 
 export const ActivityContext = createContext();
 
 const FriendsActivityContext = ({ children }) => {
   const [FriendsActivity, setFriendsActivity] = useState([]);
 
-
-  console.log(CallIcon, VideoIcon,TextIcon)
+  console.log(CallIcon, VideoIcon, TextIcon);
 
   // handle call btn
   const handleCallBtn = (findFriendData) => {
@@ -27,6 +27,7 @@ const FriendsActivityContext = ({ children }) => {
       type: "AudioCall",
       icon: CallIcon,
     };
+    toast("This person add to timeline");
 
     setFriendsActivity([...FriendsActivity, AudioCallData]);
   };
@@ -46,6 +47,7 @@ const FriendsActivityContext = ({ children }) => {
       type: "TextMessage",
       icon: TextIcon,
     };
+    toast("This person add to timeline");
 
     setFriendsActivity([...FriendsActivity, TextData]);
   };
@@ -65,6 +67,7 @@ const FriendsActivityContext = ({ children }) => {
       type: "videoCall",
       icon: VideoIcon,
     };
+    toast("This person add to timeline");
 
     setFriendsActivity([...FriendsActivity, videoCallData]);
   };

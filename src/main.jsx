@@ -9,6 +9,7 @@ import Stats from "./page/stats/Stats";
 import FriendsDetails from "./ui/friendsComponents/FriendsDetails";
 import FriendsActivityContext from "./context/FriendsActivityContext";
 import UnexpectedError from "./components/unexpectedError/UnexpectedError";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FriendsActivityContext>
       <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </FriendsActivityContext>
   </StrictMode>,
 );
