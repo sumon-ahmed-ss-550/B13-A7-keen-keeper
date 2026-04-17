@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Pie, PieChart, Tooltip } from "recharts";
 import { ResponsiveContainer, Cell, Legend } from "recharts";
 import { ActivityContext } from "../../context/FriendsActivityContext";
