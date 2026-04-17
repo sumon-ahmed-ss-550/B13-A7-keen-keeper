@@ -24,8 +24,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FriendsActivityContext>
-      <RouterProvider router={router}></RouterProvider>
-    </FriendsActivityContext>
+    <FriendsActivityContext></FriendsActivityContext>
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 );
