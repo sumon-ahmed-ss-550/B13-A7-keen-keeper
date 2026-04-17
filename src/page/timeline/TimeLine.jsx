@@ -5,10 +5,7 @@ import { useContext } from "react";
 import HistoryCard from "./HistoryCard";
 
 const TimeLine = () => {
-
- const { FriendsActivity } =
-    useContext(ActivityContext);
-
+  const { FriendsActivity } = useContext(ActivityContext);
 
   return (
     <div className="mx-5 xl:mx-0">
@@ -41,7 +38,8 @@ const TimeLine = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex justify-center">
+
+            {/* <div className="flex justify-center">
               <label className="input">
                 <svg
                   className="h-[1em] opacity-50"
@@ -61,7 +59,7 @@ const TimeLine = () => {
                 </svg>
                 <input type="search" required placeholder="Search" />
               </label>
-            </div>
+            </div> */}
           </div>
         </div>
         {FriendsActivity.map((friend, index) => {
