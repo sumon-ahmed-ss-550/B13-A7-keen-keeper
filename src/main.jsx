@@ -8,6 +8,7 @@ import TimeLine from "./page/timeline/TimeLine";
 import Stats from "./page/stats/Stats";
 import FriendsDetails from "./ui/friendsComponents/FriendsDetails";
 import FriendsActivityContext from "./context/FriendsActivityContext";
+import UnexpectedError from "./components/unexpectedError/UnexpectedError";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "timeline", Component: TimeLine },
       { path: "stats", Component: Stats },
       { path: "/friendDetails/:id", Component: FriendsDetails },
+      { path: "*", element: <UnexpectedError></UnexpectedError> },
     ],
   },
 ]);
